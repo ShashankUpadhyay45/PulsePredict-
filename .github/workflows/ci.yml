@@ -1,0 +1,19 @@
+name: CI
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Setup Docker Buildx
+        uses: docker/setup-buildx-action@v3
+      - name: Build backend image
+        run: docker build -t pulsepredict-backend ./backend
+      - name: Build frontend image
+        run: docker build -t pulsepredict-frontend ./frontend
+      - name: Run backend tests (optional)
+        run: echo "Add tests to run"
