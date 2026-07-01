@@ -25,11 +25,18 @@ def get_db():
 # CORS
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],
+    allow_origins=[
+        "http://localhost:5173",
+        "http://127.0.0.1:5173",
+        "https://pulse-predict-73lvc05f2-shashank19.vercel.app",
+        "https://pulse-predict-shashank19.vercel.app",
+        "https://pulse-predict.vercel.app",
+    ],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
 )
+
 
 oauth2_scheme = OAuth2PasswordBearer(tokenUrl="/auth/token")
 
