@@ -31,6 +31,7 @@ app.add_middleware(
         "https://pulse-predict-73lvc05f2-shashank19.vercel.app",
         "https://pulse-predict-shashank19.vercel.app",
         "https://pulse-predict.vercel.app",
+        "https://pulse-predict-five.vercel.app"
     ],
     allow_credentials=True,
     allow_methods=["*"],
