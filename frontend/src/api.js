@@ -13,6 +13,17 @@ instance.interceptors.request.use((config) => {
   return config;
 });
 
+instance.interceptors.response.use(
+  (response) => response,
+  (error) => {
+    if (error.response && error.response.status === 401) {
+      localStorage.removeItem("access_token");
+      window.location.href = "/";
+    }
+    return Promise.reject(error);
+  }
+);
+
 export const signup = (data) => instance.post("/auth/signup", data);
 export const login = (form) => instance.post("/auth/token", new URLSearchParams(form));
 export const predict = (payload) => instance.post("/predict", payload);
