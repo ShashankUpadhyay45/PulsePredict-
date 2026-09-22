@@ -3,7 +3,7 @@
 A high-fidelity, full-stack stock forecasting platform combining **FastAPI (Python)**, **React (Vite)**, and **Scikit-Learn Machine Learning models**. The application pulls live historical data from global stock exchanges via Yahoo Finance (`yfinance`), trains custom time-series linear regression models dynamically, and renders interactive, dark-glassmorphic price trend graphs.
 
 ### 🌐 Live Deployment
-* **Production Web App**: [pulse-predict-73lvc05f2-shashank19.vercel.app](https://pulse-predict-73lvc05f2-shashank19.vercel.app/)
+* **Production Web App**: [pulse-predict-five.vercel.app](https://pulse-predict-five.vercel.app/)
 * **FastAPI Microservice Engine**: [pulsepredict-backend.onrender.com](https://pulsepredict-backend.onrender.com/)
 
 ---
